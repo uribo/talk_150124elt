@@ -1,0 +1,177 @@
+---
+# Lab.note package ver. 0.2.8-2
+title: 生態学者が \textcolor{Orange1}{\faGit} を使うべき理由
+author: 瓜生真也
+date: January 24, 2015 \newline 日本生態学会関東地区会公開シンポジウム
+output:
+  beamer_presentation:
+    fonttheme: "structurebold"
+    includes:
+      in_header: style.tex
+    keep_tex: true
+    pandoc_args:
+     ["--latex-engine=xelatex"]
+linkcolor: blue
+urlcolor: red
+citecolor: Black1
+---
+
+```{r global_options, child = "document_setting.Rmd"}
+```
+
+---
+
+\center{
+  \huge{\textbf{\rotatebox{-20}{$\backslash$研究の話はなし\slash}}}
+  \small{懇親会のときに}
+}
+
+---
+
+\center{
+  \textbf{\Large{LTの内容}\\\Huge{研究の\textcolor{Orange1}{再現性}に関する話}}
+}
+
+## \faBeaker 再現性
+
+* 昔から科学にはつきまとう問題
+* 論文の内容を第三者が再現できるか
+* \textbf{再現性の高い研究 $\fallingdotseq$ 良い研究}
+
+## \faBeaker 再現性
+
+ほとんどの科学者がデータ解析や論文の原稿を執筆をコンピュータを用いて行う
+
+\textbf{\faHandLeft データを得てからの過程を機械的に記録できる}
+
+---
+
+\center{
+  \Huge{ところが...}
+}
+
+## \faWarningSign 研究中に陥る闇
+
+\center{
+  \Large{論文原稿のファイル名を\\改訂の度に変更する}
+  
+  \scriptsize{\textit{
+    \textcolor{Grey1}{
+      \faFileAlt manuscript$\_$v0.1.tex\\
+      \faFileAlt manuscript$\_$v1.0.tex\\
+      \faFileAlt manuscript$\_$v2.2.tex}\\
+    \textcolor{Orange1}{
+      \faFileAlt \textbf{manuscript$\_$submit.tex}}
+  }}
+  
+  混乱の元...
+}
+
+## \faWarningSign 研究中に陥る闇
+
+\center{
+  \Large{自分で書いた、\\解析用のコードの意味が\\わからない\\}
+  
+  \scriptsize{昔はできたはずなのに...}
+}
+
+## 闇は深い
+
+* モデルごとにファイルを用意...\newline 増殖したファイルが散乱
+* 意味不明なファイル名（ex. あ.R, temp.txt）
+* 再現性の低いエクセルでの作業
+* 削除して良いかわからないファイル
+
+---
+
+\center{
+  \fontsize{240}{10}{\rotatebox{-30}{\faThumbsDown}}
+}
+
+## どうしてこうなった
+
+\center{
+  \Huge{頭の記憶容量が小さい orz}
+}
+
+## \Large{どんなにかすれたインクでも、\\最高の記憶力に勝る}
+
+長い時間をかけて研究は完成する
+
+\faHandLeft \textbf{いつ、誰が、なにをしたのか}を記録しておくことが大事
+
+---
+
+\center{
+  \Huge{\textbf{一筋の\textcolor{white}{光明}}}
+}
+
+---
+
+\center{
+  \huge{ぎっと}
+  
+  \textcolor{Orange1}{\fontsize{200}{10}{\faGitSquare}}
+}
+
+## \textcolor{Orange1}{\faGit}とはなにか
+
+* 分散型バージョン管理システム
+* 作業内容の記録、履歴表示
+* ファイルの差分確認
+
+## 作業内容の履歴
+
+\center{
+  \includegraphics[scale = 0.3]{images/git_commit_history.png}
+}
+
+## 作業内容の履歴
+
+\center{
+  \includegraphics[scale = 0.3]{images/git_commit_history2.png}
+}
+
+## 差分表示
+
+\center{
+  \includegraphics[scale = 0.3]{images/git_diff.png}
+}
+
+---
+
+\center{
+  \huge{GitHub}
+  \fontsize{200}{10}{\faGithub}
+}
+
+## \faGithub GitHub活用事例
+
+R パッケージ
+
+## \faGithub GitHub活用事例
+
+国土地理院 \tiny{https://github.com/gsi-cyberjapan/gsimaps}
+
+```{r webshot_gsi_map, eval = FALSE}
+webshot("http://maps.gsi.go.jp/#4/31.653381/144.140625", "images/map.png", vwidth = 800, cliprect = "viewport")
+```
+
+\includegraphics[scale = 0.4]{images/map.png}
+
+
+## \faGithub GitHub活用事例
+
+第35回関東地区生態学関係修士論文発表会
+
+```{r webshot_esj_master_kanto, eval = FALSE}
+webshot("http://esj-kantomaster.github.io", "images/webshot_esj_master_kanto.png", vwidth = 800, cliprect = "viewport")
+```
+
+\includegraphics[scale = 0.4]{images/webshot_esj_master_kanto.png}
+
+\tiny{https://github.com/esj-kantomaster/esj-kantomaster.github.io}
+
+## どこかで使う
+
+\large{\textbf{\textcolor{Orange1}{\faUser 自分のため、\\\faGroup 仲間のため、\\\faGlobe 誰かのため}}}
