@@ -34,15 +34,9 @@ citecolor: Black1
 
 ## \faBeaker 再現性
 
-* 昔から科学にはつきまとう問題
+* 昔から科学につきまとう問題
 * 論文の内容を第三者が再現できるか
 * \textbf{再現性の高い研究 $\fallingdotseq$ 良い研究}
-
-## \faBeaker 再現性
-
-ほとんどの科学者がデータ解析や論文の原稿を執筆をコンピュータを用いて行う
-
-\textbf{\faHandLeft データを得てからの過程を機械的に記録できる}
 
 ---
 
@@ -64,21 +58,21 @@ citecolor: Black1
       \faFileAlt \textbf{manuscript$\_$submit.tex}}
   }}
   
-  混乱の元...
+  各種混乱の元...
 }
 
 ## \faWarningSign 研究中に陥る闇
 
 \center{
-  \Large{自分で書いた、\\解析用のコードの意味が\\わからない\\}
+  \Large{自分で書いた\\解析用のコードの意味が\\わからない\\}
   
-  \scriptsize{昔はできたはずなのに...}
+  \scriptsize{昔はできたのに...}
 }
 
 ## 闇は深い
 
 * モデルごとにファイルを用意...\newline 増殖したファイルが散乱
-* 意味不明なファイル名（ex. あ.R, temp.txt）
+* 意味不明なファイル名 （ex. あ.R, temp.txt）
 * 再現性の低いエクセルでの作業
 * 削除して良いかわからないファイル
 
@@ -88,22 +82,10 @@ citecolor: Black1
   \fontsize{240}{10}{\rotatebox{-30}{\faThumbsDown}}
 }
 
-## どうしてこうなった
-
-\center{
-  \Huge{頭の記憶容量が小さい orz}
-}
-
-## \Large{どんなにかすれたインクでも、\\最高の記憶力に勝る}
-
-長い時間をかけて研究は完成する
-
-\faHandLeft \textbf{いつ、誰が、なにをしたのか}を記録しておくことが大事
-
 ---
 
 \center{
-  \Huge{\textbf{一筋の\textcolor{white}{光明}}}
+  \Huge{\textbf{一筋の\textcolor{Yellow1}{光明}}}
 }
 
 ---
@@ -116,27 +98,36 @@ citecolor: Black1
 
 ## \textcolor{Orange1}{\faGit}とはなにか
 
-* 分散型バージョン管理システム
-* 作業内容の記録、履歴表示
-* ファイルの差分確認
+* \textbf{分散型}バージョン管理システム
+    * コンピュータのソースコード開発・管理のために作られた
+    * リポジトリによるローカル環境でのファイル管理
+        * 複数人での作業にも効果的
 
 ## 作業内容の履歴
 
 \center{
-  \includegraphics[scale = 0.3]{images/git_commit_history.png}
-}
-
-## 作業内容の履歴
-
-\center{
-  \includegraphics[scale = 0.3]{images/git_commit_history2.png}
+  \includegraphics[width = 11cm]{images/git_commit_history.pdf}
 }
 
 ## 差分表示
 
 \center{
-  \includegraphics[scale = 0.3]{images/git_diff.png}
+  \includegraphics[width =11cm]{images/git_diff.pdf}
 }
+
+## 差分表示（画像ファイル）
+
+\tiny{https://github.com/cameronmcefee/Image-Diff-View-Modes/}
+
+\center{
+  \includegraphics[width =11cm]{images/github_image_diff.pdf}
+}
+
+## \Large{どんなにかすれたインクでも、\\最高の記憶力に勝る}
+
+長い時間をかけて研究は完成する
+
+\faHandLeft \textbf{いつ、誰が、なにをしたのか}を記録しておくことが大事
 
 ---
 
@@ -145,33 +136,50 @@ citecolor: Black1
   \fontsize{200}{10}{\faGithub}
 }
 
-## \faGithub GitHub活用事例
+## \faGithub GitHubとはなにか
 
-R パッケージ
+* \textcolor{Orange1}{\faGit}リポジトリのホスティングサイト
+* 公開されたリポジトリの開発に参加できる
+* 学生、研究組織であれば無料で非公開リポジトリを作成可能
 
-## \faGithub GitHub活用事例
+## \faGithub GitHub活用事例: \newline Rパッケージ
 
-国土地理院 \tiny{https://github.com/gsi-cyberjapan/gsimaps}
+開発、配布は \newline CRAN \faArrowRight \textbf{GitHubが主流に}
 
-```{r webshot_gsi_map, eval = FALSE}
-webshot("http://maps.gsi.go.jp/#4/31.653381/144.140625", "images/map.png", vwidth = 800, cliprect = "viewport")
-```
+\tiny{例) taxizeパッケージ (https://github.com/ropensci/taxize)}
 
-\includegraphics[scale = 0.4]{images/map.png}
+`devtools::install_github("taxize", "ropensci")`
 
+## \faGithub GitHub活用事例: \newline BADD
 
-## \faGithub GitHub活用事例
+\footnotesize{https://github.com/dfalster/baad}
 
-第35回関東地区生態学関係修士論文発表会
+* \scriptsize{\textit{a Biomass And Allometry Database for woody plants}}
+* \scriptsize{データおよび使用したRコードを公開}
+* \scriptsize{Ecologyに投稿中とのこと}
 
-```{r webshot_esj_master_kanto, eval = FALSE}
-webshot("http://esj-kantomaster.github.io", "images/webshot_esj_master_kanto.png", vwidth = 800, cliprect = "viewport")
-```
-
-\includegraphics[scale = 0.4]{images/webshot_esj_master_kanto.png}
+## \faGithub GitHub活用事例: \newline \normalsize{第35回関東地区生態学関係修士論文発表会}
 
 \tiny{https://github.com/esj-kantomaster/esj-kantomaster.github.io}
 
-## どこかで使う
+\includegraphics[width = 11cm]{images/webshot_esj_master_kanto.pdf}
 
-\large{\textbf{\textcolor{Orange1}{\faUser 自分のため、\\\faGroup 仲間のため、\\\faGlobe 誰かのため}}}
+## \large{Reproducible Research \newline に対する機運}
+
+\begin{columns}[T]
+  \begin{column}[T]{4cm}
+    \tiny{\faFile Ram, K. (2013). \textcolor{Orange1}{\textbf{Git can facilitate greater reproducibility and increased transparency in science}}. \textit{Source Code for Biology and Medicine}}\\
+    \tiny{\faFile Peng, R. D. (2011). \textit{Science}}\\
+    \tiny{\faFile Loman, N., \& Watson, M. (2013). \textit{Nature Biotechnology}}
+  \end{column}
+  \begin{column}[T]{6cm}
+    \tiny{http://www.nature.com/news/toolbox}\\
+    \includegraphics[width = 6cm]{images/reproducible_research.pdf}\\
+  \end{column}
+\end{columns}
+
+## \faBullhorn Try \textcolor{Orange1}{\faGit}
+
+\center{
+  \huge{\textbf{\textcolor{Orange1}{\faUser 自分のため、\\\faGroup 仲間のため、\\\faGlobe 誰かのため}}}
+}

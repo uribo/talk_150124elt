@@ -56,6 +56,7 @@
 \definecolor{Beige1}{RGB}{236, 237, 227}
 \definecolor{Navy1}{RGB}{16, 126, 137}
 \definecolor{Grey1}{RGB}{164, 173, 185}
+\definecolor{Yellow1}{RGB}{242, 163, 25}
 
 \usepackage{zxjatype}
 \setjamainfont{Hiragino Kaku Gothic Pro}
@@ -115,20 +116,12 @@
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  昔から科学にはつきまとう問題
+  昔から科学につきまとう問題
 \item
   論文の内容を第三者が再現できるか
 \item
   \textbf{再現性の高い研究 $\fallingdotseq$ 良い研究}
 \end{itemize}
-
-\end{frame}
-
-\begin{frame}{\faBeaker 再現性}
-
-ほとんどの科学者がデータ解析や論文の原稿を執筆をコンピュータを用いて行う
-
-\textbf{\faHandLeft データを得てからの過程を機械的に記録できる}
 
 \end{frame}
 
@@ -154,7 +147,7 @@
       \faFileAlt \textbf{manuscript$\_$submit.tex}}
   }}
   
-  混乱の元...
+  各種混乱の元...
 }
 
 \end{frame}
@@ -162,9 +155,9 @@
 \begin{frame}{\faWarningSign 研究中に陥る闇}
 
 \center{
-  \Large{自分で書いた、\\解析用のコードの意味が\\わからない\\}
+  \Large{自分で書いた\\解析用のコードの意味が\\わからない\\}
   
-  \scriptsize{昔はできたはずなのに...}
+  \scriptsize{昔はできたのに...}
 }
 
 \end{frame}
@@ -176,7 +169,7 @@
 \item
   モデルごとにファイルを用意\ldots{}\newline 増殖したファイルが散乱
 \item
-  意味不明なファイル名（ex. あ.R, temp.txt）
+  意味不明なファイル名 （ex. あ.R, temp.txt）
 \item
   再現性の低いエクセルでの作業
 \item
@@ -193,26 +186,10 @@
 
 \end{frame}
 
-\begin{frame}{どうしてこうなった}
-
-\center{
-  \Huge{頭の記憶容量が小さい orz}
-}
-
-\end{frame}
-
-\begin{frame}{\Large{どんなにかすれたインクでも、\\最高の記憶力に勝る}}
-
-長い時間をかけて研究は完成する
-
-\faHandLeft \textbf{いつ、誰が、なにをしたのか}を記録しておくことが大事
-
-\end{frame}
-
 \begin{frame}
 
 \center{
-  \Huge{\textbf{一筋の\textcolor{white}{光明}}}
+  \Huge{\textbf{一筋の\textcolor{Yellow1}{光明}}}
 }
 
 \end{frame}
@@ -232,11 +209,21 @@
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
 \item
-  分散型バージョン管理システム
-\item
-  作業内容の記録、履歴表示
-\item
-  ファイルの差分確認
+  \textbf{分散型}バージョン管理システム
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    コンピュータのソースコード開発・管理のために作られた
+  \item
+    リポジトリによるローカル環境でのファイル管理
+
+    \begin{itemize}
+    \itemsep1pt\parskip0pt\parsep0pt
+    \item
+      複数人での作業にも効果的
+    \end{itemize}
+  \end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -244,15 +231,7 @@
 \begin{frame}{作業内容の履歴}
 
 \center{
-  \includegraphics[scale = 0.3]{images/git_commit_history.png}
-}
-
-\end{frame}
-
-\begin{frame}{作業内容の履歴}
-
-\center{
-  \includegraphics[scale = 0.3]{images/git_commit_history2.png}
+  \includegraphics[width = 11cm]{images/git_commit_history.pdf}
 }
 
 \end{frame}
@@ -260,8 +239,26 @@
 \begin{frame}{差分表示}
 
 \center{
-  \includegraphics[scale = 0.3]{images/git_diff.png}
+  \includegraphics[width =11cm]{images/git_diff.pdf}
 }
+
+\end{frame}
+
+\begin{frame}{差分表示（画像ファイル）}
+
+\tiny{https://github.com/cameronmcefee/Image-Diff-View-Modes/}
+
+\center{
+  \includegraphics[width =11cm]{images/github_image_diff.pdf}
+}
+
+\end{frame}
+
+\begin{frame}{\Large{どんなにかすれたインクでも、\\最高の記憶力に勝る}}
+
+長い時間をかけて研究は完成する
+
+\faHandLeft \textbf{いつ、誰が、なにをしたのか}を記録しておくことが大事
 
 \end{frame}
 
@@ -274,33 +271,76 @@
 
 \end{frame}
 
-\begin{frame}{\faGithub GitHub活用事例}
+\begin{frame}{\faGithub GitHubとはなにか}
 
-R パッケージ
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \textcolor{Orange1}{\faGit}リポジトリのホスティングサイト
+\item
+  公開されたリポジトリの開発に参加できる
+\item
+  学生、研究組織であれば無料で非公開リポジトリを作成可能
+\end{itemize}
 
 \end{frame}
 
-\begin{frame}{\faGithub GitHub活用事例}
+\begin{frame}{\faGithub GitHub活用事例: \newline Rパッケージ}
 
-国土地理院 \tiny{https://github.com/gsi-cyberjapan/gsimaps}
+開発、配布は \newline CRAN \faArrowRight \textbf{GitHubが主流に}
 
-\includegraphics[scale = 0.4]{images/map.png}
+\tiny{例) taxizeパッケージ (https://github.com/ropensci/taxize)}
+
+\texttt{devtools::install\_github("taxize", "ropensci")}
 
 \end{frame}
 
-\begin{frame}{\faGithub GitHub活用事例}
+\begin{frame}{\faGithub GitHub活用事例: \newline BADD}
 
-第35回関東地区生態学関係修士論文発表会
+\footnotesize{https://github.com/dfalster/baad}
 
-\includegraphics[scale = 0.4]{images/webshot_esj_master_kanto.png}
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \scriptsize{\textit{a Biomass And Allometry Database for woody plants}}
+\item
+  \scriptsize{データおよび使用したRコードを公開}
+\item
+  \scriptsize{Ecologyに投稿中とのこと}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{\faGithub GitHub活用事例:
+\newline \normalsize{第35回関東地区生態学関係修士論文発表会}}
 
 \tiny{https://github.com/esj-kantomaster/esj-kantomaster.github.io}
 
+\includegraphics[width = 11cm]{images/webshot_esj_master_kanto.pdf}
+
 \end{frame}
 
-\begin{frame}{どこかで使う}
+\begin{frame}{\large{Reproducible Research \newline に対する機運}}
 
-\large{\textbf{\textcolor{Orange1}{\faUser 自分のため、\\\faGroup 仲間のため、\\\faGlobe 誰かのため}}}
+\begin{columns}[T]
+  \begin{column}[T]{4cm}
+    \tiny{\faFile Ram, K. (2013). \textcolor{Orange1}{\textbf{Git can facilitate greater reproducibility and increased transparency in science}}. \textit{Source Code for Biology and Medicine}}\\
+    \tiny{\faFile Peng, R. D. (2011). \textit{Science}}\\
+    \tiny{\faFile Loman, N., \& Watson, M. (2013). \textit{Nature Biotechnology}}
+  \end{column}
+  \begin{column}[T]{6cm}
+    \tiny{http://www.nature.com/news/toolbox}\\
+    \includegraphics[width = 6cm]{images/reproducible_research.pdf}\\
+  \end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{\faBullhorn Try \textcolor{Orange1}{\faGit}}
+
+\center{
+  \huge{\textbf{\textcolor{Orange1}{\faUser 自分のため、\\\faGroup 仲間のため、\\\faGlobe 誰かのため}}}
+}
 
 \end{frame}
 
