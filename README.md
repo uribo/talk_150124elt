@@ -12,6 +12,6 @@
 
 ## 進捗どうですか？
 
-要旨を作成した
+発表資料を作成した。発表は明日。
 
-![Progress](http://progressed.io/bar/22)
+![Progress](http://progressed.io/bar/70)
